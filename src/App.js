@@ -7,6 +7,7 @@ import API from "./components/api"
 import axios from "axios"
 import Header from "./components/Header"
 
+
 class App extends Component {
   state = {
     users: [],
@@ -19,12 +20,11 @@ class App extends Component {
 
     const BASEURL = "https://randomuser.me/api/?results=200";
 
-    // Export an object with a "search" method that searches the RAMDOMUSER API for the passed query
 
     axios.get(BASEURL)
       .then(db => {
 
-        // call the api for get the users
+        // api call
         const getusers = db.data.results
         this.setState({ users: getusers, usersFilter: getusers })
       })
@@ -39,16 +39,16 @@ class App extends Component {
     });
   };
 
-  // When the form is submitted, search the  API for `this.state.search`
+  // search the  API for `this.state.search`
   handleFormSubmit = event => {
     event.preventDefault();
     console.log("searchterm:", this.state.search)
     this.setState({ usersFilter: this.state.users.filter(user => (user.name.first.toLowerCase()).indexOf(this.state.search.toLowerCase()) !== -1) })
 
-    // this.searchGiphy(this.state.search);
+    
   };
 
-  //sort array was taken from stackoverflow
+  //sort array 
   sortAge() {
     let sortedArray = this.state.users
     function compare(a, b) {
@@ -58,13 +58,13 @@ class App extends Component {
       if (a.dob.age < b.dob.age) {
         return 1;
       }
-      // a must be equal to b
+      
       return 0;
     }
     this.setState({ user: sortedArray.sort(compare) })
   }
 
-  // render will pull the information fom the components library 
+  // render 
   render() {
     return (
       <div className="App">

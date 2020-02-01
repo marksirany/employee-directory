@@ -49,13 +49,13 @@ class App extends Component {
   };
 
   //sort array 
-  sortAge() {
+  sortCity() {
     let sortedArray = this.state.users
     function compare(a, b) {
-      if (a.dob.age > b.dob.age) {
+      if (a.location.city > b.location.city) {
         return -1;
       }
-      if (a.dob.age < b.dob.age) {
+      if (a.location.city < b.location.city) {
         return 1;
       }
       
@@ -75,7 +75,7 @@ class App extends Component {
           handleInputChange={this.handleInputChange}
         />
         <h2>or</h2>
-        <button onClick={() => this.sortAge()}>Sort by Age</button>
+        <button onClick={() => this.sortCity()}>Sort by City</button>
         <List
           users={this.state.usersFilter}
         />

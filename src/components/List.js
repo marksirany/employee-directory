@@ -11,7 +11,7 @@ function List(props) {
                     <th scope="col">Last</th>
                     <th scope="col">Age</th>
                     <th scope="col">City</th>
-                    <th scope="col">email</th>
+                   
                 </tr>
             </thead>
             <tbody>
@@ -21,7 +21,7 @@ function List(props) {
                         <td >{user.name.last}</td>
                         <td >{user.dob.age}</td>
                         <td >{user.location.city}</td>
-                        <td >{user.email}</td>
+                        
                     </tr>
                 )}
 

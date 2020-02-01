@@ -1,5 +1,11 @@
+button {
+  background-color: yellowgreen;
+  color: white;
+  
+}
+
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {

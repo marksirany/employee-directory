@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-//  import Header from "./components/"
+
 import List from "./components/List"
 import SearchForm from "./components/Form"
 
@@ -74,6 +74,7 @@ class App extends Component {
           handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
         />
+        <h2>or</h2>
         <button onClick={() => this.sortAge()}>Sort by Age</button>
         <List
           users={this.state.usersFilter}

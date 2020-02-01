@@ -1,3 +1,7 @@
+LIVE SITE HERE: https://dreamy-kirch-2ee48c.netlify.com/
+
+![userinput pic](./pic.gif)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -1,4 +1,5 @@
 import React from "react";
+import "./List.css"
 //render information
 function List(props) {
 

@@ -1,3 +1,8 @@
-header {
-  color: blueviolet;
+h1 {
+  height: 75px;
+  
+  margin-top: 0;
+  text-align: center;
+  background-color: rgb(255, 68, 131);
+  color: rgb(255, 255, 255);
 }

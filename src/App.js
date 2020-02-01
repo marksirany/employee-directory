@@ -64,6 +64,36 @@ class App extends Component {
     this.setState({ user: sortedArray.sort(compare) })
   }
 
+  sortAge() {
+    let sortedArray = this.state.users
+    function compare(a, b) {
+      if (a.dob.age > b.dob.age) {
+        return -1;
+      }
+      if (a.dob.age < b.dob.age) {
+        return 1;
+      }
+
+      return 0;
+    }
+    this.setState({ user: sortedArray.sort(compare) })
+  }
+
+  sortLast() {
+    let sortedArray = this.state.users
+    function compare(a, b) {
+      if (a.name.last > b.name.last) {
+        return -1;
+      }
+      if (a.name.last < b.name.last) {
+        return 1;
+      }
+
+      return 0;
+    }
+    this.setState({ user: sortedArray.sort(compare) })
+  }
+
   // render 
   render() {
     return (
@@ -75,7 +105,9 @@ class App extends Component {
           handleInputChange={this.handleInputChange}
         />
         <h2>or</h2>
+        <button onClick={() => this.sortLast()}>Sort by Last Name</button>
         <button onClick={() => this.sortCity()}>Sort by City</button>
+        <button onClick={() => this.sortAge()}>Sort by Age</button>
         <List
           users={this.state.usersFilter}
         />
